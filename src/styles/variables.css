@@ -1,0 +1,78 @@
+:root {
+  /* Color System */
+  --color-warm-ivory: #fffff2;
+  --color-soft-white: #fafafa;
+  --color-cream: #f8f5f2;
+  --color-very-light-pink: #fdf5f6;
+  --color-morning-mist: #e6eae7;
+  
+  --color-surface-glass-white: rgba(255, 255, 255, 0.65);
+  --color-surface-glass-blur: rgba(255, 255, 255, 0.4);
+  
+  --color-primary: #E91E63;
+  --color-secondary: #6DBE45;
+  --color-accent: #D4AF37;
+  
+  --color-text-primary: #222222;
+  --color-text-secondary: #666666;
+  
+  /* Gradients */
+  --gradient-sunrise: linear-gradient(135deg, var(--color-warm-ivory) 0%, var(--color-very-light-pink) 50%, var(--color-cream) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.2) 100%);
+  
+  /* Typography Variables */
+  --font-primary: 'Satoshi', 'General Sans', 'Neue Montreal', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+  
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+  --text-8xl: 6rem;
+  
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  
+  /* Shadows & Depth */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  
+  /* Radii */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease-out;
+  --transition-normal: 0.3s ease-out;
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1); /* Apple-like easing */
+  --ease-apple: cubic-bezier(0.25, 1, 0.5, 1);
+}

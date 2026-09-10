@@ -1,0 +1,80 @@
+/* Typography Styles */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--color-text-primary);
+  letter-spacing: var(--tracking-tight);
+}
+
+.text-display {
+  font-size: var(--text-6xl);
+  font-weight: 300;
+  letter-spacing: var(--tracking-tight);
+}
+
+@media (min-width: 768px) {
+  .text-display {
+    font-size: var(--text-8xl);
+  }
+}
+
+.text-h1 {
+  font-size: var(--text-5xl);
+}
+
+@media (min-width: 768px) {
+  .text-h1 {
+    font-size: var(--text-6xl);
+  }
+}
+
+.text-h2 {
+  font-size: var(--text-4xl);
+}
+
+.text-h3 {
+  font-size: var(--text-3xl);
+}
+
+.text-h4 {
+  font-size: var(--text-2xl);
+}
+
+.text-body-large {
+  font-family: var(--font-secondary);
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.text-body {
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.text-body-small {
+  font-family: var(--font-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.text-label {
+  font-family: var(--font-secondary);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

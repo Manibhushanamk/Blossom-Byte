@@ -1,0 +1,113 @@
+.heroSection {
+  position: relative;
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-32);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.subtitle {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-10);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.heroGrid {
+  margin-top: var(--space-24);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .heroGrid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.cardImageHolder {
+  height: 300px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-6);
+}
+
+.placeholderImage1 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  transition: transform var(--transition-slow);
+}
+
+.placeholderImage2 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  transition: transform var(--transition-slow);
+}
+
+.cardImageHolder:hover .placeholderImage1,
+.cardImageHolder:hover .placeholderImage2 {
+  transform: scale(1.05);
+}
+
+/* Floating Glass Fragments (Petals dissolving into UI) */
+.glassFragment {
+  position: absolute;
+  background: var(--color-surface-glass-blur);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; /* Organic petal-like shape */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.fragment1 {
+  top: 10%;
+  left: 5%;
+  width: 200px;
+  height: 250px;
+  box-shadow: 0 8px 32px rgba(233, 30, 99, 0.05);
+  animation: float-petal 12s ease-in-out infinite alternate;
+}
+
+.fragment2 {
+  top: 40%;
+  right: 10%;
+  width: 150px;
+  height: 150px;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  box-shadow: 0 8px 32px rgba(109, 190, 69, 0.05);
+  animation: float-petal 15s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes float-petal {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(30px, -40px) rotate(15deg); }
+}

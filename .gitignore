@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local config & test artifacts
+blossom-config.json
+vercel_output.txt
+webp/
+test.jpg
+
+# Uncompressed PNG frames (using public/lotus-webp instead)
+public/lotus/

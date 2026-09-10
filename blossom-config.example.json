@@ -1,0 +1,6 @@
+{
+  "dbUri": "mongodb+srv://<username>:<password>@cluster0.mongodb.net",
+  "dbName": "blossom-byte",
+  "isSetupComplete": false,
+  "setupDate": ""
+}

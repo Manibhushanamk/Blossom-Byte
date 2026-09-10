@@ -1,0 +1,47 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-full);
+  font-family: var(--font-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  overflow: hidden;
+  transition: box-shadow 0.4s var(--ease-apple);
+  z-index: 1;
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  pointer-events: none;
+}
+
+/* Primary Button */
+.primary {
+  background: var(--color-primary);
+  color: var(--color-warm-ivory);
+}
+
+.primary:hover {
+  box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+}
+
+/* Secondary Button - Glass */
+.secondary {
+  background: var(--color-surface-glass-white);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--color-text-primary);
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-glass);
+}

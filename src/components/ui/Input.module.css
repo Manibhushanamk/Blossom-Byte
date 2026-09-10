@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.label {
+  font-family: var(--font-secondary);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--color-surface-glass-white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-md);
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+  color: var(--color-foreground);
+  transition: all 0.3s var(--ease-apple);
+  outline: none;
+}
+
+.input:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.hasError {
+  border-color: var(--color-primary);
+}
+
+.errorText {
+  color: var(--color-primary);
+  font-size: var(--text-xs);
+  font-family: var(--font-secondary);
+}

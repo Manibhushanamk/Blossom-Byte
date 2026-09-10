@@ -1,0 +1,249 @@
+.main {
+  min-height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  background-color: var(--color-warm-ivory);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: var(--text-4xl);
+  color: var(--color-foreground);
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-family: var(--font-secondary);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchForm {
+  display: flex;
+  gap: var(--space-4);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.inputWrapper {
+  position: relative;
+  flex: 1;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-secondary);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 16px 16px 16px 48px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: var(--color-surface-glass-white);
+  backdrop-filter: blur(10px);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.resultContainer {
+  margin-top: var(--space-12);
+}
+
+.trackingCard {
+  background: var(--color-surface-glass-white);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 24px;
+  padding: var(--space-8);
+  box-shadow: var(--shadow-soft);
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  margin-bottom: var(--space-8);
+}
+
+.orderNumber {
+  font-family: var(--font-primary);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+}
+
+.orderDate {
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+.orderTotal {
+  font-family: var(--font-primary);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-10);
+  padding: 0 var(--space-4);
+}
+
+.timelineStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-text-secondary);
+  position: relative;
+  z-index: 2;
+}
+
+.timelineStep.active {
+  color: var(--color-primary);
+}
+
+.stepIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-warm-ivory);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.timelineStep.active .stepIcon {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-background);
+}
+
+.stepText {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timelineLine {
+  flex: 1;
+  height: 2px;
+  background: rgba(0,0,0,0.1);
+  margin: 0 -10px;
+  position: relative;
+  top: -15px;
+  z-index: 1;
+}
+
+.timelineLine.active {
+  background: var(--color-primary);
+}
+
+.itemsTitle {
+  font-family: var(--font-primary);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.itemRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.itemImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.itemInfo {
+  flex: 1;
+}
+
+.itemName {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--text-base);
+}
+
+.itemQty {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  margin-top: 4px;
+}
+
+.itemPrice {
+  font-family: var(--font-primary);
+  font-weight: 500;
+}
+
+.notFound {
+  text-align: center;
+  padding: var(--space-12) 0;
+}
+
+.notFoundIcon {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+  opacity: 0.5;
+}
+
+.notFound h2 {
+  font-family: var(--font-primary);
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+}
+
+.notFound p {
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .searchForm {
+    flex-direction: column;
+  }
+  .timeline {
+    padding: 0;
+  }
+  .stepText {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,46 @@
+.main {
+  min-height: 100vh;
+  padding-top: 120px;
+  background-color: var(--color-warm-ivory);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 0 var(--space-6);
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: var(--text-4xl);
+  color: var(--color-foreground);
+  margin-bottom: var(--space-6);
+}
+
+.description {
+  font-family: var(--font-secondary);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.adminSection {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.adminTitle {
+  font-family: var(--font-primary);
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+}
+
+.adminDesc {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+}

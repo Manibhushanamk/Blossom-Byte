@@ -1,0 +1,227 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--space-4);
+}
+
+.pageTitle {
+  font-family: var(--font-primary);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+}
+
+.pageSubtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.filtersCard {
+  padding: var(--space-4);
+}
+
+.filters {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.searchWrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--space-4);
+  color: var(--color-text-secondary);
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-10);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.5);
+  font-family: var(--font-secondary);
+  font-size: var(--text-sm);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  border-color: var(--color-foreground);
+}
+
+.filterWrapper {
+  width: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filterIcon {
+  position: absolute;
+  left: var(--space-4);
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.filterSelect {
+  width: 100%;
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-10);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.5);
+  font-family: var(--font-secondary);
+  font-size: var(--text-sm);
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.tableCard {
+  padding: 0;
+  overflow: hidden;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  padding: var(--space-4) var(--space-6);
+  background: rgba(0,0,0,0.02);
+  font-family: var(--font-secondary);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.table td {
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+  font-size: var(--text-sm);
+  vertical-align: middle;
+}
+
+.productCell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.thumbnail {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  background: var(--color-cream);
+}
+
+.productName {
+  font-weight: 500;
+}
+
+.skuCell {
+  font-family: monospace;
+  color: var(--color-text-secondary);
+}
+
+.categoryBadge {
+  background: rgba(0,0,0,0.05);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+}
+
+.priceCell {
+  font-weight: 500;
+}
+
+.stockBadge {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.stockGood {
+  background: rgba(109, 190, 69, 0.1);
+  color: var(--color-secondary);
+}
+
+.stockLow {
+  background: rgba(233, 30, 99, 0.1);
+  color: var(--color-primary);
+}
+
+.actionButtons {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.editBtn, .deleteBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  transition: all 0.2s;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editBtn:hover {
+  background: rgba(0,0,0,0.05);
+  color: var(--color-text-primary);
+}
+
+.deleteBtn:hover {
+  background: rgba(233, 30, 99, 0.1);
+  color: var(--color-primary);
+}
+
+.emptyState {
+  padding: var(--space-16);
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-family: var(--font-secondary);
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+  
+  .filters {
+    flex-direction: column;
+  }
+  
+  .filterWrapper {
+    width: 100%;
+  }
+}

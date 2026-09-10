@@ -1,0 +1,88 @@
+.sequenceContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* Dark background for cinematic feel */
+  overflow: hidden;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-warm-ivory);
+  z-index: 50;
+  color: var(--color-text-primary);
+  font-family: var(--font-secondary);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.loaderText {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.storyLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.storyBlock {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 0 var(--space-4);
+  /* Use GSAP to animate opacity/transform of these elements based on scroll */
+  opacity: 0; 
+  transform: translateY(20px);
+}
+
+.storyHeadline {
+  font-size: var(--text-4xl);
+  color: #ffffff; /* White text over cinematic background */
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  font-weight: 300;
+  letter-spacing: var(--tracking-tight);
+}
+
+@media (min-width: 768px) {
+  .storyHeadline {
+    font-size: var(--text-6xl);
+  }
+}
+
+.storySub {
+  font-family: var(--font-secondary);
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: var(--space-4);
+}
+
+.scene1 { top: 30%; }
+.scene2 { top: 50%; }
+.scene3 { top: 40%; }
